@@ -143,9 +143,8 @@ def main():
 if __name__ == "__main__":
     main()
 
-# added by hypjudy
 # $ tensorboard --logdir ./log/train_log/
-# visit: http://172.18.181.94:6006/
+# visit: hostname:6006/
 # Q: ERROR:tensorflow:Tried to connect to port 6006, but address is in use.
 # $ ps aux | grep tensorboard
 # $ kill -9 pid
