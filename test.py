@@ -130,12 +130,11 @@ if __name__ == "__main__":
     main()
     print "Finished testing."
 
-# added by hypjudy
 # $ tensorboard --logdir ./log/test_log/
-# visit: http://172.18.181.94:6006/
+# visit: hostname:6006/
 # Q: ERROR:tensorflow:Tried to connect to port 6006, but address is in use.
 # $ ps aux | grep tensorboard
 # $ kill -9 pid
 # or
 # $ tensorboard --logdir ./log/test_log/ --port=8008
-# visit: http://172.18.181.94:8008/
+# visit: hostname:8008/
