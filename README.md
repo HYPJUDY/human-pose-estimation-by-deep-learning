@@ -5,9 +5,8 @@ Please read my [post](https://hypjudy.github.io/2017/05/04/pose-estimation/) for
 ## How to Run
 The images in `data/input/` is not complete. If you just want to run the code with demo images, the codes can run without modification. If you want to train and test with complete images:
 
-pose\_estimation/data/input/test_imgs: ~4000 test images
-pose\_estimation/data/input/train_imgs: ~60000 train images, use half of them
-Each of them are labeled with 15 articulate points.
+* `human-pose-estimation-by-deep-learning/data/input/test_imgs`: ~4000 test images
+* `human-pose-estimation-by-deep-learning/data/input/train_imgs`: ~60000 train images, use half of them. Each of them are labeled with 15 articulate points.
 
 Please contact with me for data. And modify the parametaer `TAG = "_demo"` to `TAG = ""` in corresponding files like `train.py`, `test.py` and `draw_point.py`.
 
