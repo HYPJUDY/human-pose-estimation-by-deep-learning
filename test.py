@@ -15,23 +15,16 @@ import read_data
 class Config():
 
     # == modify parameters ===========================
-    TAG = "mix_half" # used for uniform filename
-    FLAG = "cleaned_3" # "cleaned": train cleaned data;
-                     # "origin": train origin data
+    TAG = "_demo" # used for uniform filename
+                 # "_demo": train with demo images
+               # "": (empty) train with ~60000 images
     steps = "30000"
     # ================================================
 
-    # test_num = 50
-    # annos_path = "./labels/txt/input/test_annos.txt"
-    # data_path = "./data/input/test_imgs"
-    # annos_write_path = "./labels/txt/output/test_annos_" +\
-    #  TAG + "_" + FLAG + ".txt"
     test_num = 50
-    annos_path = "./labels/txt/input/train_annos_" +\
-     TAG + "_" + FLAG + ".txt"
-    data_path = "./data/input/train_imgs_mix_half_cleaned"
-    annos_write_path = "./labels/txt/output/train_annos_" +\
-     TAG + "_" + FLAG + ".txt"
+    annos_path = "./labels/txt/input/test_annos" + TAG + ".txt"
+    data_path = "./data/input/test_imgs" + TAG
+    annos_write_path = "./labels/txt/output/test_annos" + TAG + ".txt"
     batch_size = 20
     initialize = False
     gpu = '/gpu:0'
@@ -62,8 +55,8 @@ class Config():
     moving_average_decay = 0.999
 
     # checkpoint path and filename
-    logdir = "./log/test_log/"
-    params_dir = "./params/" + FLAG + "_" + TAG + "/"
+    logdir = "./log/test_log/" # no use in test phase
+    params_dir = "./params/" + TAG + "/" # no use in test phase
 
     load_filename = "cpm" + '-' + steps
     save_filename = "cpm"

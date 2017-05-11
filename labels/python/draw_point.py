@@ -43,15 +43,15 @@ def draw_imgs(src_dir, dst_dir, annos_file):
 
 def main():
     # =========== Specify parameters =====================
-    TAG = "mix_half" # used for uniform filename
-    FLAG = "cleaned_3" # "cleaned": train cleaned data;
-                     # "origin": train origin data
+    TAG = "_demo" # used for uniform filename
+                  # "_demo": train with demo images
+                  # "": (empty) train with ~60000 images
     PHASE = "train"  # "train" or "test"
     # ====================================================
 
-    src_dir = "../../data/input/" + PHASE + "_imgs/"
-    dst_dir = "../../data/output/" + PHASE + "_imgs_" + TAG + "_" + FLAG + "/"
-    annos_file = "../txt/output/" + PHASE + "_annos_" + TAG + "_" + FLAG + ".txt"
+    src_dir = "../../data/input/" + PHASE + "_imgs" + TAG + "/"
+    dst_dir = "../../data/output/" + PHASE + "_imgs" + TAG + "/"
+    annos_file = "../txt/output/" + PHASE + "_annos" + TAG + ".txt"
     
     print ("start")
     draw_imgs(src_dir, dst_dir, annos_file)

@@ -15,11 +15,13 @@ import read_data
 class Config():
 
   # =================== modify parameters ==================
-  TAG = "mix_half" # used for uniform filename
-  FLAG = "cleaned_3" # "cleaned": train cleaned data;
-                   # "origin": train origin data
+  TAG = "_demo" # used for uniform filename
+               # "_demo": train with demo images
+               # "": (empty) train with ~60000 images
   batch_size = 20
-  initialize = True # True: train from scratch;
+  initialize = True # True: train from scratch (should also
+                    # delete the corresponding params files
+                    # in params_dir);
                      # False: restore from pretrained model
   steps = "30000"   # if 'initialize = False', set steps to 
                      # where you want to restore
@@ -31,14 +33,13 @@ class Config():
   validate_iters = 2000
   # ========================================================
 
-  annos_path = "./labels/txt/input/train_annos_" +\
-   TAG + "_" + FLAG + ".txt"
-  data_path = "./data/input/train_imgs_" + TAG + "_" + FLAG + "/"
+  annos_path = "./labels/txt/input/train_annos" + TAG + ".txt"
+  data_path = "./data/input/train_imgs" + TAG + "/"
   gpu = '/gpu:0'
 
   # checkpoint path and filename
   logdir = "./log/train_log/"
-  params_dir = "./params/" + FLAG + "_" + TAG + "/"
+  params_dir = "./params/" + TAG + "/"
   load_filename = "cpm" + '-' + steps
   save_filename = "cpm"
 
@@ -142,9 +143,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# $ tensorboard --logdir ./log/train_log/
-# visit: hostname:6006/
-# Q: ERROR:tensorflow:Tried to connect to port 6006, but address is in use.
-# $ ps aux | grep tensorboard
-# $ kill -9 pid
