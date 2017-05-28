@@ -8,7 +8,7 @@ The images in `data/input/` is not complete. If you just want to run the code wi
 * `human-pose-estimation-by-deep-learning/data/input/test_imgs`: ~4000 test images
 * `human-pose-estimation-by-deep-learning/data/input/train_imgs`: ~60000 train images, use half of them. Each of them are labeled with 15 articulate points.
 
-Please contact with me for data. And modify the parametaer `TAG = "_demo"` to `TAG = ""` in corresponding files like `train.py`, `test.py` and `draw_point.py`.
+Please contact with [JakeRenn](https://github.com/JakeRenn/pose_estimation) for data (maybe not available currently). And modify the parametaer `TAG = "_demo"` to `TAG = ""` in corresponding files like `train.py`, `test.py` and `draw_point.py`.
 
 ### Train
 ``` shell
