@@ -40,4 +40,30 @@ cd human-pose-estimation-by-deep-learning\labels\python\
 python draw_point.py
 ```
 
-Then the images with 15 points should be generated in `human-pose-estimation-by-deep-learning\data\output\train_imgs_demo\`. Modify the parameter `PHASE` to `test` will draw test images' points.
+Then the images with 15 points should be generated in `human-pose-estimation-by-deep-learning\data\output\train_imgs_demo\` (I have generated them for your reference). Modify the parameter `PHASE` to `test` will draw test images' points.
+
+For example, the annos file of image `01060538.png` is
+```
+01060538.png 137,68,136,80,138,105,121,90,107,102,87,114,152,90,168,105,189,118,133,131,130,163,128,201,146,130,149,161,153,199,1
+```
+This line means image `01060538.png` is labeled with 15 points and their coordinates are (137,68), (136,80), ..., (153,199) (please see the following example output to understand their order). And this line is ended with `'1'`.
+By running `draw_point.py`, the output is
+```
+drawing image 01060538.png
+coordinate of point # 1 : ( 137 , 68 )
+coordinate of point # 2 : ( 136 , 80 )
+coordinate of point # 3 : ( 138 , 105 )
+coordinate of point # 4 : ( 121 , 90 )
+coordinate of point # 5 : ( 107 , 102 )
+coordinate of point # 6 : ( 87 , 114 )
+coordinate of point # 7 : ( 152 , 90 )
+coordinate of point # 8 : ( 168 , 105 )
+coordinate of point # 9 : ( 189 , 118 )
+coordinate of point # 10 : ( 133 , 131 )
+coordinate of point # 11 : ( 130 , 163 )
+coordinate of point # 12 : ( 128 , 201 )
+coordinate of point # 13 : ( 146 , 130 )
+coordinate of point # 14 : ( 149 , 161 )
+coordinate of point # 15 : ( 153 , 199 )
+```
+![](https://github.com/HYPJUDY/human-pose-estimation-by-deep-learning/blob/master/data/output/train_imgs_demo/01060538.png)
